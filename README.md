@@ -68,6 +68,7 @@ Installiere die benötigten Python-Pakete mit pip:
     pip install -r requirements.txt
 
 Hinweis: Zusätzliche Pakete wie design.styles, model.trainvalidation usw. sollten im Projekt enthalten sein. Stelle sicher, dass alle Modulpfade korrekt sind.
+Es könnte einige Minuten dauern, bis die Abhängigkeiten installiert sind.
 
 ## Anwendung starten
 Sobald alle Abhängigkeiten installiert sind, kannst du die Streamlit-App starten:
@@ -75,6 +76,11 @@ Sobald alle Abhängigkeiten installiert sind, kannst du die Streamlit-App starte
     streamlit run boardgameapp.py
     
 Nach Ausführung dieses Befehls öffnet sich dein Standard-Webbrowser automatisch und zeigt die WitchBoardGame?!-App an. Falls sich der Browser nicht automatisch öffnet, folge dem im Terminal angezeigten lokalen URL (z.B., http://localhost:8501).
+Es könnte einige Minuten dauern, bis die Anwendung startet. 
+
+Hinweis: 
+Klicke auf die drei Punkte oben rechts neben dem Button Deploy, dann auf Settings, unter Choose app theme, colors and fonts wähle "Dark" aus. Damit siehst du die App wie beabsichtigt. Auch ohne diese Änderung funktioniert die App, jedoch ist es unter Dark mode wesentlich angenehmer.
+
 
 ## Projektstruktur
 Das Projekt ist wie folgt strukturiert:
