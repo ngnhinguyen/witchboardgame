@@ -1,58 +1,55 @@
 # witchboardgame?! 🎲🔮
 
-Willkommen bei witchboardgame?!, einer interaktiven Streamlit-App, die dir personalisierte Brettspiel-Empfehlungen basierend auf deinen Vorlieben bietet. Diese technische Anleitung hilft dir dabei, die App einfach einzurichten und zu starten.
+Welcome to witchboardgame?!, an interactive Streamlit app that provides personalized board game recommendations based on your preferences. This technical guide will help you easily set up and launch the app.
 
-# Inhaltsverzeichnis
-1. Projektbeschreibung
-2. Voraussetzungen
+# Table of Contents
+1. Project Description
+2. Requirements
 3. Installation
-   1. Repository klonen
-   2. Virtuelle Umgebung einrichten
-   3. Abhängigkeiten installieren
-4. Anwendung starten
-5. Projektstruktur
-6. Daten und Dateien
+   1. Clone Repository
+   2. Set Up Virtual Environment
+   3. Install Dependencies
+4. Start the Application
+5. Project Structure
+6. Data and Files
 
-## Projektbeschreibung
-witchboardgame?! ist eine Python-basierte Webanwendung, die mit Streamlit entwickelt wurde. Sie nutzt maschinelles Lernen, um individuelle Brettspiel-Empfehlungen zu geben. Basierend auf deinen Antworten auf verschiedene Fragen zur Spielerzahl, Spieldauer, Thema und Schwierigkeitsgrad, zeigt die App passende Spiele.
+## Project Description
+witchboardgame?! is a Python-based web application developed with Streamlit. It uses machine learning to provide individual board game recommendations. Based on your answers to various questions about number of players, game duration, theme, and difficulty level, the app displays suitable games.
 
-## Voraussetzungen
-Bevor du mit der Installation beginnst, stelle sicher, dass du die folgenden Voraussetzungen erfüllst:
+## Requirements
+Before starting the installation, make sure you meet the following requirements:
 
-Python 3.7 oder höher: Die App ist in Python geschrieben und benötigt eine kompatible Python-Version.
-Git: Um das Repository zu klonen.
-Internetverbindung: Für das Herunterladen der benötigten Pakete und das Ausführen der Streamlit-App.
+Python 3.7 or higher: The app is written in Python and requires a compatible Python version.
+Git: To clone the repository.
+Internet connection: For downloading the required packages and running the Streamlit app.
 
 ## Installation
-Folge diesen Schritten, um witchboardgame?! auf deinem lokalen Rechner einzurichten:
+Follow these steps to set up witchboardgame?! on your local machine:
 
-## 1. Repository klonen
-Zuerst musst du das Repository auf deinen Computer klonen. Öffne dazu dein Terminal und führe den folgenden Befehl aus:
-
+## 1. Clone Repository
+First, you need to clone the repository to your computer. Open your terminal and run the following command:
 
     git clone https://github.com/ngnhinguyen/witchboardgame
 
-Wechsle anschließend in das Projektverzeichnis:
+Then switch into the project directory:
 
     cd witchboardgame
     
-## 2. Virtuelle Umgebung einrichten
-Es wird empfohlen, eine virtuelle Umgebung zu verwenden, um Abhängigkeiten isoliert zu verwalten.
-Mit bspw. conda:
+## 2. Set Up Virtual Environment
+It is recommended to use a virtual environment to manage dependencies in isolation.
+Using, for example, conda:
 
     conda create --name witchboardgame python=3.9
 
-Aktiviere die virtuelle Umgebung mit conda:
-
+Activate the virtual environment with conda:
 
     conda activate witchboardgame
 
-
-Oder nutze bspw. venv:
+Or use, for example, venv:
 
     python -m venv env
 
-Aktiviere die virtuelle Umgebung:
+Activate the virtual environment:
 
 Windows:
 
@@ -62,54 +59,53 @@ macOS/Linux:
 
     source env/bin/activate
 
-## 3. Abhängigkeiten installieren
-Installiere die benötigten Python-Pakete mit pip:
+## 3. Install Dependencies
+Install the required Python packages using pip:
 
     pip install -r requirements.txt
 
-Hinweis: Zusätzliche Pakete wie design.styles, model.trainvalidation usw. sollten im Projekt enthalten sein. Stelle sicher, dass alle Modulpfade korrekt sind.
-Es könnte einige Minuten dauern, bis die Abhängigkeiten installiert sind.
+Note: Additional packages such as design.styles, model.trainvalidation, etc., should be included in the project. Make sure that all module paths are correct.
+It may take several minutes until the dependencies are installed.
 
-## Anwendung starten
-Sobald alle Abhängigkeiten installiert sind, kannst du die Streamlit-App starten:
+## Start the Application
+Once all dependencies are installed, you can start the Streamlit app:
 
     streamlit run boardgameapp.py
     
-Nach Ausführung dieses Befehls öffnet sich dein Standard-Webbrowser automatisch und zeigt die WitchBoardGame?!-App an. Falls sich der Browser nicht automatisch öffnet, folge dem im Terminal angezeigten lokalen URL (z.B., http://localhost:8501).
-Es könnte einige Minuten dauern, bis die Anwendung startet. 
+After executing this command, your default web browser will automatically open and display the WitchBoardGame?! app. If the browser does not open automatically, follow the local URL shown in the terminal (e.g., http://localhost:8501).
+It may take several minutes until the application starts. 
 
-Hinweis: 
-Klicke auf die drei Punkte oben rechts neben dem Button Deploy, dann auf Settings, unter Choose app theme, colors and fonts wähle "Dark" aus. Damit siehst du die App wie beabsichtigt. Auch ohne diese Änderung funktioniert die App, jedoch ist es unter Dark mode wesentlich angenehmer.
+Note: 
+Click on the three dots in the top right next to the Deploy button, then click on Settings. Under Choose app theme, colors and fonts select "Dark". This allows you to see the app as intended. The app will also work without this change, but it is much more pleasant in Dark mode.
 
+## Project Structure
+The project is structured as follows:
 
-## Projektstruktur
-Das Projekt ist wie folgt strukturiert:
+boardgameapp.py: Main application script.
 
-boardgameapp.py: Hauptanwendungsskript.
+design/: Contains UI designs and style files.
+This includes 
+- app_ui.py: Contains all UI settings of the app.
+- game_ui.py: An earlier version of app_ui.py
+- styles.py: Contains the code for the style and layout of the app.
 
-design/: Enthält UI-Designs und Style-Dateien.
-Darunter fallen 
-- app_ui.py: Enthält alle UI Einstellungen der App.
-- game_ui.py: Eine frühere Version von app_ui.py
-- styles.py: Enthält den Code für den Stil und Layout der App.
+model/: Contains the models and data preprocessing scripts.
+This includes
+- cross_validation.py: Implementation of cross-validation.
+- knn.py: Implementation of the kNN model.
+- preprocess.py: Contains the data preprocessing of the dataset.
+- trainvalidation.py: Implementation of the train-validation-test split.
 
-model/: Beinhaltet die Modelle und Datenvorverarbeitungsskripte.
-Darunter gehören
-- cross_validation.py: Implementierung des Cross-Validation.
-- knn.py: Implementierung des kNN- Modells.
-- preprocess.py: Enthält die Datenvorverarbeitung des Datensatzes.
-- trainvalidation.py: Implementierung des Train-Validation-Test-Splits.
+bgg_db_1806.csv: Board game dataset.
 
-bgg_db_1806.csv: Datensatz der Brettspiele.
+hail-126903.mp3: Audio file for the app.
 
-hail-126903.mp3: Audiodatei für die App.
+## Data and Files
+Make sure the following files are present in the project directory:
 
-## Daten und Dateien
-Stelle sicher, dass die folgenden Dateien im Projektverzeichnis vorhanden sind:
-
-bgg_db_1806.csv: Die CSV-Datei enthält die Brettspieldaten. Diese Datei wird für die Datenvorverarbeitung und Empfehlungen verwendet.
-hail-126903.mp3: Eine Audiodatei, die in der App abgespielt wird.
+bgg_db_1806.csv: The CSV file contains the board game data. This file is used for data preprocessing and recommendations.
+hail-126903.mp3: An audio file that is played in the app.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Viel Spaß mit witchboardgame?!! 🧙‍♀️🎲
+Have fun with witchboardgame?!! 🧙‍♀️🎲
